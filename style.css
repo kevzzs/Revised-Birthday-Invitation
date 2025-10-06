@@ -200,7 +200,8 @@ body {
 /* ---------- PRENUP ---------- */
 
 #prenup {
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   padding: 0 10px 20px;
 }
 
