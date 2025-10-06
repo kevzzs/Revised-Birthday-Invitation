@@ -176,11 +176,6 @@ body {
   border-radius: 5px;
 }
 
-.venue-img a {
-  position: relative;
-  z-index: 10;
-}
-
 #details .details-unif h1 {
   font-size: 3rem;
   color: #4790da;
