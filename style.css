@@ -492,6 +492,8 @@ footer {
 
   #prenup .prenup-grid img {
     height: 350px;
+    width: 100%;
+    display: block;
   }
 
   #details {
