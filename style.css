@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif, cursive;
+  scroll-behavior: smooth;
+  background-color: rgb(255, 191, 255);
+  overflow-x: hidden;
+}
+
+#header {
+  height: 100vh;
+  position: relative;
+  background: url('./assets/images/heading.png') no-repeat center top/cover;
+  color: #eeeeee;
+  padding: 6rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* #header .header-heading h3 {
+  z-index: 1;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+#header .header-heading h1 {
+  margin: 1rem 0 3rem 0;
+  font-size: 5rem;
+  position: relative;
+  z-index: 2;
+  transform: scale(1.2);
+  display: inline-block;
+} */
+
+#header .timer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+#header .timer div {
+  z-index: 1;
+  position: relative;
+  font-size: 3rem;
+  text-align: center;
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+
+/* ---------- secondHeader ---------- */
+
+#second-header {
+  height: 50vh;
+  background: url('./assets/images/Blue\ Watercolor\ Background\ Card\ Landscape\ \(4\).png') no-repeat center center/cover;
+}
+
+#second-header .second-header-heading {
+  justify-content: center;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.main-decor {
+  width: 200px;
+  height: 50px;
+  object-fit: cover;
+  animation: bounce 3s infinite;
+}
+
+#second-header h1 {
+  font-size: 2.9rem;
+}
+
+#second-header span {
+  font-size: 4.3rem;
+}
+
+#second-header h2 {
+  font-size: 2.8rem;
+}
+
+/* ---------- details ---------- */
+
+#details {
+  height: 90vh;
+  display: grid;
+  align-items: center;
+  padding: 0 20px;
+  margin: 1rem 0 3rem;
+}
+
+#details .details-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  gap: 30px;
+}
+
+#details .color-palette {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+}
+
+#details .color-item {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s, box-shadow 0.3s;
+}
+
+#details .color-item:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#details .details-unif {
+  padding: 30px;
+  width: 90%;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#details .details-venue {
+  border-radius: 5px;
+  background-color: #A7C7E7;
+  padding: 30px;
+  box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.2);
+  width: 90%;
+}
+
+#details .details-venue img {
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.venue-img a {
+  position: relative;
+  z-index: 10;
+}
+
+#details .details-unif h1 {
+  font-size: 3rem;
+  color: #4790da;
+}
+
+#details .venue-heading {
+  font-size: 3rem;
+  color: #4790da;
+}
+
+#details .venue-descript h1 {
+  font-size: 1.1rem;
+  color: #473c33;
+  padding-top: 2.4rem;
+}
+
+#details .details-unif .sub-heading {
+  font-size: 1.1rem;
+  color: #473c33;
+}
+
+/* ---------- PRENUP ---------- */
+
+#prenup {
+  height: 100%;
+  padding: 0 10px 20px;
+}
+
+#prenup .prenup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  width: 100%;
+}
+
+#prenup .prenup-grid img {
+  width: 100%;
+  height: 400px;
+  background-position: top;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+
+/* ---------- FAQS ---------- */
+
+/* #faqs {
+  margin: 50px 0 0 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #abc270;
+  text-align: center;
+  color: #ffffff;
+  align-items: center;
+}
+
+#faqs h2 {
+  font-size: 3.5rem;
+  color: #473c33;
+}
+
+#faqs .details-ques {
+  margin-top: 2rem;
+  text-align: left;
+  width: 55%;
+}
+
+#faqs summary {
+  color: #473c33;
+  font-size: 1.3rem;
+  background-color: #fec868;
+  margin: 7px 0;
+  padding: 2px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#faqs details p {
+  background-color: #ffffff;
+  padding: 7px 10px;
+  color: #473c33;
+  border-radius: 8px;
+  font-size: 1.2rem;
+} */
+
+#faqs {
+  background-color: #A7C7E7;
+  object-fit: cover;
+  padding: 30px 50px;
+  height: 100%;
+}
+
+#faqs>h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+#faqs>.container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+
+#faqs>.container>.child {
+  border-radius: 5px;
+  padding: 60px 0;
+  background: url('./assets/images/background.png') no-repeat center center/cover;
+  text-align: center;
+  color: #4790da;
+  font-style: italic;
+  box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+#faqs>.container>.child>h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0080ff;
+}
+
+/*!---------- RSVP ------------*/
+
+/* #rsvp {
+  padding: 60px 0;
+  height: 100%;
+  text-align: center;
+}
+
+#rsvp h2 {
+  font-size: 2.5rem;
+}
+
+#rsvp p {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #fda769;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px #ffb6c1;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #fa7a1f;
+  transform: scale(1.05);
+} */
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  padding: 2px 0
+}
+
+
+
+
+/* ANIMATION */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------- RESPONSIVE DESIGN -------------- */
+
+@media (max-width: 1024px) {
+  #details .details-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #prenup .prenup-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #second-header {
+    height: 40vh;
+  }
+
+  #details {
+    height: 100%;
+    margin-bottom: 2 rem;
+  }
+
+  /* #faqs .details-ques {
+    width: 80%;
+  } */
+
+  /* #faqs {
+    height: 70vh;
+  } */
+
+  .timer>div>span {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* #header .header-heading h1 {
+    font-size: 2.5rem;
+  } */
+
+  #header .timer div {
+    font-size: 1.3rem;
+    gap: 0.5rem;
+  }
+
+  #header .timer div>span {
+    font-size: 1.5rem;
+  }
+
+  #second-header h1 {
+    font-size: 2rem;
+  }
+
+  #second-header span {
+    font-size: 2.8rem;
+  }
+
+  #second-header h2 {
+    font-size: 1.8rem;
+  }
+
+  #details {
+    padding: 40px 20px;
+    height: 100%;
+  }
+
+  #details .details-unif {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  #details .color-palette {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 60px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  #prenup .prenup-grid {
+    grid-template-columns: repeat(2fr, 1fr);
+  }
+
+  #prenup .prenup-grid img {
+    height: 250px;
+  }
+
+  /* #faqs h2 {
+    font-size: 2.5rem;
+  }
+
+  #faqs {
+    height: 70vh;
+  }
+
+  #faqs .details-ques {
+    width: 90%;
+  }
+
+  #rsvp h2 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 6px 18px;
+  } */
+}
+
+@media (max-width: 480px) {
+  #header {
+    padding: 4rem 1rem;
+  }
+
+  #header .header-heading h3 {
+    font-size: 0.9rem;
+  }
+
+  #header .header-heading h1 {
+    font-size: 2rem;
+  }
+
+  #second-header {
+    height: 20vh;
+  }
+
+  .timer>div>span {
+    font-size: 1.4rem;
+  }
+
+  #prenup .prenup-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+
+  #prenup .prenup-grid img {
+    height: 350px;
+  }
+
+  #details {
+    height: 100%;
+  }
+
+  #details .color-palette {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+    margin: 30px auto 50px;
+  }
+
+  #header .timer {
+    gap: 1rem;
+  }
+
+  #header .timer div {
+    font-size: 1.1rem;
+  }
+
+  #second-header h1,
+  #second-header span,
+  #second-header h2 {
+    font-size: 1.5rem;
+  }
+
+  #details .color-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  #faqs {
+    padding: 30px 20px;
+  }
+
+  #faqs>.container>.child>h1 {
+    font-size: 2rem;
+  }
+
+  /* #faqs {
+    height: 70vh;
+  }
+
+  #faqs h2 {
+    font-size: 2rem;
+  } */
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
