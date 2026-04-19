@@ -220,6 +220,7 @@ body {
   background-position: top;
   object-fit: cover;
   transition: 0.3s ease-in-out;
+  display: block; /* Ensure images are always block */
 }
 
 /* ---------- FAQS ---------- */
@@ -438,10 +439,14 @@ footer {
 
   #prenup .prenup-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   #prenup .prenup-grid img {
     height: 250px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   /* #faqs h2 {
@@ -488,14 +493,16 @@ footer {
   }
 
   #prenup .prenup-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr; /* Single column */
     gap: 0.5rem;
   }
 
   #prenup .prenup-grid img {
     height: 350px;
     width: 100%;
-    display: block;
+    display: block !important; /* Force display */
+    object-fit: cover;
+    border-radius: 8px; /* Optional: add some border radius */
   }
 
   #details {
